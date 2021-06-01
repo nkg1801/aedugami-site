@@ -1,0 +1,286 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="aedugami_style.css">-->
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 95%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+    
+}
+
+.sidebar a {
+  padding: 0px 5px 0px 0px;
+  text-decoration: none;
+  //font-size: 14px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #FF0000;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidebar ul{
+  padding: 10px;
+  list-style-type: square;
+  font-size: 14px;
+}
+
+.openbtn {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 6px 6px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+div.scroll {
+	white-space: pre;
+	padding: 10px;
+	border: 1px solid #999;
+	//width: 300px;
+	height: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	//white-space: nowrap;
+	background-color: #eee;
+	font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width:300px;
+  max-height:400px;
+  width: auto;
+  height: auto;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  margin-left: 250px;
+  padding: 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+
+<script>
+
+function toggleSidebar() {
+  
+  var elem = document.getElementById("toggle_button");
+  if(elem.innerHTML == "Close Table of Contents")
+  {
+	closeNav();
+	elem.innerHTML = "Open Table of Contents";
+  }
+  else{
+  openNav();
+  elem.innerHTML = "Close Table of Contents";
+  }
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</head>
+<body>
+
+
+<div id="mySidebar" class="sidebar">
+    
+	
+	<center>Table of Contents</center><br><br>
+
+<strong><font color=red> <center>Installation</center></font></strong>
+
+<ul>
+<li style="padding-bottom:0.5em"><a  style="text-decoration:none" href="https://developer.android.com/studio" target = "_blank">&#9830; &nbsp;Install and configure Android Studio</a></li>
+  <li style="padding-bottom:0.5em"><a  style="text-decoration:none" href="configure_avd.html">&#9830; &nbsp;Configure Android Virtual Machine</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="https://flutter.dev/docs/get-started/install" target ="contents">&#9830; &nbsp;Install and configure Flutter and Dart SDK</a></li>
+</ul>
+
+<strong><font color=red> <center>Introduction </center></font></strong>
+
+<ul style="list-style-type:square;">
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_flutter.html">&#9830; &nbsp;Introduction to Flutter</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="why_flutter.html"> &#9830; &nbsp;Why flutter</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_dart.html">&#9830; &nbsp;Introduction to Dart language</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dart_data_types.html">&#9830; &nbsp;Data types in Dart</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="conditional_loop_dart.html">&#9830; &nbsp;Conditional and loop constructs in Dart</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="list_dart.html">&#9830; &nbsp;List in Dart</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="sync_async_dart.html">&#9830; &nbsp;Synchronous and asynchronous functions</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="future_functions_dart.html">&#9830; &nbsp;Future functions - async functions</a></li>
+
+  
+</ul>
+
+<strong><font color=red> <center>Start Building Mobile App </center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="material_design.html">&#9830; &nbsp;Material design</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="app_basic_structure.html">&#9830; &nbsp;Basic structure of a mobile app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="first_flutter_app.html">&#9830; &nbsp;Building first flutter app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="project_and_file_structure.html">&#9830; &nbsp;Project and file structure of flutter app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="running_app_in_emulator.html">&#9830; &nbsp;Run your app in android emulator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="deploying_app_in_real_device.html">&#9830; &nbsp;Deploying apps in real device</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="using_terminal_window.html">&#9830; &nbsp;Using Android Studio Terminal Window</a></li>
+
+</ul>
+
+<strong><font color=red> <center>Using different Widgets </center></font></strong>
+
+<ul>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="scaffold_widget.html">&#9830; &nbsp;Scaffold</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="app_bar.html">&#9830; &nbsp;AppBar</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="text_widget.html">&#9830; &nbsp;Text</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="sized_box.html">&#9830; &nbsp;SizedBox</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="row_widget.html">&#9830; &nbsp;Row</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="column_widget.html">&#9830; &nbsp;Column</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="center_widget.html">&#9830; &nbsp;Center</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="align_widget.html">&#9830; &nbsp;Align</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="textfield_widget.html">&#9830; &nbsp;TextField</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="texteditingcontroller.html">&#9830; &nbsp;TextEditingController</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="focus_node.html">&#9830; &nbsp;FocusNode</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="buttons.html">&#9830; &nbsp;TextButton, ElevatedButton and OutlineButton</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="gas_detector.html">&#9830; &nbsp;GestureDetector</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dropdown_button.html">&#9830; &nbsp;DropDownButton</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="container.html">&#9830; &nbsp;Container</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="padding.html">&#9830; &nbsp;Padding</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="image_and_icons.html">&#9830; &nbsp;Image and Icon</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="listview.html">&#9830; &nbsp;ListView</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="card.html">&#9830; &nbsp;Card</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="ink_well.html">&#9830; &nbsp;InkWell</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="form.html">&#9830; &nbsp;Form, FormTextField</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="circular_progress_indicator.html">&#9830; &nbsp;CircularProgressIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="linear_progress_indicator.html">&#9830; &nbsp;LinearProgressIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="checkbox.html">&#9830; &nbsp;CheckBox</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="radiolist_tile.html">&#9830; &nbsp;RadioListTile (RadioButton)</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="stack.html">&#9830; &nbsp;Stack</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="refresh_indicator.html">&#9830; &nbsp;RefreshIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="tab.html">&#9830; &nbsp;Tab</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="auto_complete.html">&#9830; &nbsp;AutoComplete</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="flutter_logo.html">&#9830; &nbsp;FlutterLogo</a></li>
+
+</ul>
+
+<strong><font color=green> <center>Exercise </center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_1.html">&#9830; &nbsp;Exercise - 1 (Color grid)</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_2_login_form.html">&#9830; &nbsp;Exercise - 2 (Login form)</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_3_row_1.html">&#9830; &nbsp;Exercise - 3</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_4_row_bottom_aligned.html">&#9830; &nbsp;Exercise - 4</a></li>
+</ul>
+
+<strong><font color=red> <center>Page Routing, App Bar and Drawer </center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Page Routing, Navigation between pages</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Action button on app bar</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Drawer</li>
+  
+</ul>
+
+<strong><font color=red> <center>Package management</center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Package management</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Using 3rd party packages</li>
+  
+</ul>
+
+<strong><font color=red> <center>Using Cloud Authentication and database </center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Create and configure Firebase project</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Different Cloud authentication methods</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Email and password authentication</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Social media plug-in authentication</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Create, configure and use Firebase realtime db</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Add, Update and delete data to firebase db</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Create and use Firebase Firestore db</li>
+</ul>
+
+<strong><font color=red> <center>Monetizing app </center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;introduction to monetizing app</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Make money with your app</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Integration Google AdMob in your app</li>
+
+</ul>
+
+<strong><font color=red> <center>Publishing app in play store </center></font></strong>
+
+<ul>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Debug vs Release build</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Version management</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;App signing</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Generating release builds</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Step by step guide to publish app in the play store</li>
+
+</ul>
+
+<br/>
+<strong><font color=green><a style="text-decoration:none" href="questions.html" target ="contents"><center>Question and Answers</center></a></font></strong>
+<br/><br/><br/>
+	
+  </div>
+
+
+
+<div id="main">
+  <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Close Table of Contents</button>  
+
+<br/>
+<body bgcolor="#F8F9FA">
+<br><br><br><br>
+<center><img src="../images/flutter.png">
+<center><img src="../images/flutter_home.png" width="1000px">
+
+
+   
+</body>
+</html> 

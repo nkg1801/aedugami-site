@@ -1,0 +1,518 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="aedugami_style.css">-->
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 95%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+    
+}
+
+.sidebar a {
+  padding: 0px 5px 0px 0px;
+  text-decoration: none;
+  //font-size: 14px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #FF0000;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidebar ul{
+  padding: 10px;
+  list-style-type: square;
+  font-size: 14px;
+}
+
+.openbtn {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 6px 6px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+div.scroll {
+	white-space: pre;
+	padding: 10px;
+	border: 1px solid #999;
+	//width: 300px;
+	height: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
+	//white-space: nowrap;
+	background-color: #eee;
+	font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width:400px;
+  max-height:500px;
+  width: auto;
+  height: auto;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  margin-left: 250px;
+  padding: 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+
+<script>
+
+function toggleSidebar() {
+  
+  var elem = document.getElementById("toggle_button");
+  if(elem.innerHTML == "Hide Table of Contents")
+  {
+	closeNav();
+	elem.innerHTML = "Show Table of Contents";
+  }
+  else{
+  openNav();
+  elem.innerHTML = "Hide Table of Contents";
+  }
+}
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</head>
+<body>
+
+
+<div id="mySidebar" class="sidebar">
+    
+	
+	<center>Table of Contents</center><br><br>
+
+<strong><font color=red> <center>Installation</center></font></strong>
+
+<ul style="list-style-type:none;">
+<li style="padding-bottom:0.5em"><a  style="text-decoration:none" href="https://developer.android.com/studio" target = "_blank">&#9830; &nbsp;Install and configure Android Studio</a></li>
+  <li style="padding-bottom:0.5em"><a  style="text-decoration:none" href="configure_avd.html">&#9830; &nbsp;Configure Android Virtual Machine</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="https://flutter.dev/docs/get-started/install" target ="contents">&#9830; &nbsp;Install and configure Flutter and Dart SDK</a></li>
+</ul>
+
+<strong><font color=red> <center>Introduction </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_flutter.html">&#9830; &nbsp;Introduction to Flutter</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="why_flutter.html"> &#9830; &nbsp;Why flutter</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_dart.html">&#9830; &nbsp;Introduction to Dart language</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dart_data_types.html">&#9830; &nbsp;Data types in Dart</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="conditional_loop_dart.html">&#9830; &nbsp;Conditional and loop constructs in Dart</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="list_dart.html">&#9830; &nbsp;List in Dart</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="sync_async_dart.html">&#9830; &nbsp;Synchronous and asynchronous functions</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="future_functions_dart.html">&#9830; &nbsp;Future functions - async functions</a></li>
+
+  
+</ul>
+
+<strong><font color=red> <center>Start Building Mobile App </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="material_design.html">&#9830; &nbsp;Material design</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="app_basic_structure.html">&#9830; &nbsp;Basic structure of a mobile app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="first_flutter_app.html">&#9830; &nbsp;Building first flutter app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="project_and_file_structure.html">&#9830; &nbsp;Project and file structure of flutter app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="running_app_in_emulator.html">&#9830; &nbsp;Run your app in android emulator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="deploying_app_in_real_device.html">&#9830; &nbsp;Deploying apps in real device</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="using_terminal_window.html">&#9830; &nbsp;Using Android Studio Terminal Window</a></li>
+
+</ul>
+
+<strong><font color=red> <center>Using different Widgets </center></font></strong>
+
+<ul style="list-style-type:none;">
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="scaffold_widget.html">&#9830; &nbsp;Scaffold</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="app_bar.html">&#9830; &nbsp;AppBar</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="text_widget.html">&#9830; &nbsp;Text</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="sized_box.html">&#9830; &nbsp;SizedBox</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="row_widget.html">&#9830; &nbsp;Row</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="column_widget.html">&#9830; &nbsp;Column</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="center_widget.html">&#9830; &nbsp;Center</a></li>
+	<li style="padding-bottom:0.5em"><a style="text-decoration:none" href="align_widget.html">&#9830; &nbsp;Align</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="textfield_widget.html">&#9830; &nbsp;TextField</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="texteditingcontroller.html">&#9830; &nbsp;TextEditingController</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="focus_node.html">&#9830; &nbsp;FocusNode</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="buttons.html">&#9830; &nbsp;TextButton, ElevatedButton and OutlineButton</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="gas_detector.html">&#9830; &nbsp;GestureDetector</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dropdown_button.html">&#9830; &nbsp;DropDownButton</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="container.html">&#9830; &nbsp;Container</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="padding.html">&#9830; &nbsp;Padding</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="image_and_icons.html">&#9830; &nbsp;Image and Icon</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="listview.html">&#9830; &nbsp;ListView</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="card.html">&#9830; &nbsp;Card</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="ink_well.html">&#9830; &nbsp;InkWell</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="form.html">&#9830; &nbsp;Form, FormTextField</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="circular_progress_indicator.html">&#9830; &nbsp;CircularProgressIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="linear_progress_indicator.html">&#9830; &nbsp;LinearProgressIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="checkbox.html">&#9830; &nbsp;CheckBox</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="radiolist_tile.html">&#9830; &nbsp;RadioListTile (RadioButton)</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="stack.html">&#9830; &nbsp;Stack</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="refresh_indicator.html">&#9830; &nbsp;RefreshIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="tab.html">&#9830; &nbsp;Tab</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="auto_complete.html">&#9830; &nbsp;AutoComplete</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="flutter_logo.html">&#9830; &nbsp;FlutterLogo</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="bottomnavigationbar.html">&#9830; &nbsp;BottomNavigationBar</a></li>
+
+</ul>
+
+<strong><font color=green> <center>Exercise </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_1.html">&#9830; &nbsp;Exercise - 1 (Color grid)</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_2_login_form.html">&#9830; &nbsp;Exercise - 2 (Login form)</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_3_row_1.html">&#9830; &nbsp;Exercise - 3</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="exercise_4_row_bottom_aligned.html">&#9830; &nbsp;Exercise - 4</a></li>
+</ul>
+
+<strong><font color=red> <center>Page Routing, App Bar and Drawer </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Page Routing, Navigation between pages</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Action button on app bar</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Drawer</li>
+  
+</ul>
+
+<strong><font color=red> <center>Package management</center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Package management</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Using 3rd party packages</li>
+  
+</ul>
+
+<strong><font color=red> <center>Using Cloud Authentication and database </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Create and configure Firebase project</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Different Cloud authentication methods</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Email and password authentication</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Social media plug-in authentication</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Create, configure and use Firebase realtime db</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Add, Update and delete data to firebase db</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Create and use Firebase Firestore db</li>
+</ul>
+
+<strong><font color=red> <center>Monetizing app </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;introduction to monetizing app</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Make money with your app</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Integration Google AdMob in your app</li>
+
+</ul>
+
+<strong><font color=red> <center>Publishing app in play store </center></font></strong>
+
+<ul style="list-style-type:none;">
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Debug vs Release build</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Version management</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;App signing</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Generating release builds</li>
+  <li style="padding-bottom:0.5em">&#9830; &nbsp;Step by step guide to publish app in the play store</li>
+
+</ul>
+
+<br/>
+<strong><font color=green><a style="text-decoration:none" href="questions.html" target ="contents"><center>Question and Answers</center></a></font></strong>
+<br/><br/><br/>
+	
+  </div>
+
+
+
+<div id="main">
+  <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button> 
+  
+
+<br/>
+    <p><h1>BottomNavigationBar Widget</h1></p>
+
+    <p>A material widget that is displayed at the bottom of an app allowing the user to switch between small number of views. A BottomNavigationBar in android looks like the following:<br/><br/></p>
+    
+    <p><img src="../images/bottomnav.png"><img></p><br/>
+    
+    <p><strong>Notable parameters:</strong>  </p>
+	<ul>
+		<li>type</li>
+		<li>items</li>
+
+	</ul>
+    <br>
+
+
+<h3><font color="red">type</font></h3>
+type parameter of the BottomNavigationBar widget is used specify the type of the BottomNavigationBar. 2 values are possible: <i>fixed</i> and <i>shifting</i><br/>
+<p>Usage: The following code snippet shows the usage of <strong>type</strong> parameter:</p>
+<div class="scroll">
+<code>
+Scaffold(
+  backgroundColor: Colors.green,
+  appBar: AppBar(title: Text('I am learning flutter')),
+  body: Text('My flutter app'),
+  <mark>bottomNavigationBar: BottomNavigationBar(</mark>
+  	<mark>type: BottomNavigationBarType.fixed</mark>
+  ),
+)
+</code>
+</div>
+<br/>
+
+<!-- body -->
+
+<br><br>
+<h3><font color="red">items</font></h3>
+<strong>items</strong> parameter of the BottomNavigationBar widget is used to specify the list of BottomNavigationBarItem that needs to be displayed.<br/>
+<p>Usage: </p>
+<div class="scroll">
+<code>
+Scaffold(
+  backgroundColor: Colors.green,
+  appBar: AppBar(title: Text('I am learning flutter')),
+  body: Text('My flutter app'),
+  <mark>bottomNavigationBar:BottomNavigationBar(
+          type: BottomNavigationBarType.fixed ,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home, color: Colors.black),
+                label: 'Home'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.add_shopping_cart, color: Colors.black),
+                label: 'Car'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle, color: Colors.black),
+                label:'Profile'
+            ),
+          ],
+          onTap: (index){
+            // index is the index of the BottomNavigationBarItem that is clicked
+            // do what you want to do here when a particular item is clicked
+          },
+        )</mark>
+)
+</code>
+</div>
+<br/>
+
+<br>
+    <p><strong>Complete main.dart demonstrating the usage of BottomNavigationBar. Just replace the content of your main.dart file with this and run the code.</strong></p>
+
+<div class="scroll">
+
+<code>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+
+        child: Column(
+
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const<Widget>[
+            Text('Home Page',style: TextStyle(fontSize: 36)),
+          ],
+        ),
+      ),
+        bottomNavigationBar:BottomNavigationBar(
+          type: BottomNavigationBarType.fixed ,
+          items: const[
+            BottomNavigationBarItem(
+                icon: Icon(Icons.notifications, color: Colors.black),
+                label: 'Notifications'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.add_shopping_cart, color: Colors.black),
+                label: 'Cart'
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.account_circle, color: Colors.black),
+                label:'Profile'
+            ),
+          ],
+          onTap: (index){
+            switch(index) {
+              case 0:
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return NotificationPageWidget();
+                    }));
+                break;
+
+              case 1:
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) {
+                        return CartPageWidget();
+                      }));
+                  break;
+
+              case 2:
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return ProfilePageWidget();
+                    }));
+                break;
+            }
+          },
+        )
+    );
+  }
+}
+
+class NotificationPageWidget extends StatefulWidget
+{
+  @override
+  State<StatefulWidget> createState() {
+    return _NotificationPageWidgetState();
+  }
+}
+
+class _NotificationPageWidgetState extends State<NotificationPageWidget>
+{
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(title: const Text('Notification Page'),),
+      body: const Center(child: Text('Notification Page',style: TextStyle(fontSize: 36))),
+    );
+  }
+}
+
+class CartPageWidget extends StatefulWidget
+{
+  @override
+  State<StatefulWidget> createState() {
+    return _CartPageWidgetState();
+  }
+}
+
+class _CartPageWidgetState extends State<CartPageWidget>
+{
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(title: const Text('Cart Page'),),
+      body: const Center(child: Text('Cart Page',style: TextStyle(fontSize: 36))),
+    );
+  }
+}
+
+class ProfilePageWidget extends StatefulWidget
+{
+  @override
+  State<StatefulWidget> createState() {
+    return _ProfilePageWidgetState();
+  }
+}
+
+class _ProfilePageWidgetState extends State<ProfilePageWidget>
+{
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+        appBar: AppBar(title: const Text('Profile Page'),),
+      body: const Center(child: Text('Profile page', style: TextStyle(fontSize: 36),),)
+    );
+  }
+}
+</code>
+
+
+</div>
+<br/>
+
+<script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnkg1801%2Fsamples%2Fblob%2Fd3234038eb1dd6fe09130a6fe9d46208dd8a24c8%2Fmain.dart&style=github-gist&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+<p>Output:</p>
+
+<p><img src="../images/bottom_navigation_output.png"><img></p>
+
+
+</body>
+</html>
