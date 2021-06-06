@@ -325,26 +325,59 @@ while (year < 2016) {
 </p>
 
 <h3>Functions</h3>
-We recommend specifying the types of each function’s arguments and return value:
+<p>A function is a set of instructions to accomplish a task.</p>
+<p>Example #1: A function which adds 2 numbers and displays the result:</p>
 <p>
 <div class="scroll">
 <code>
-int fibonacci(int n) {
-  if (n == 0 || n == 1) return n;
-  return fibonacci(n - 1) + fibonacci(n - 2);
+void add() {
+  int num1 = 10;
+  int num2 = 20;
+  int result = num1 + num2;
+  print(result);
 }
-
-var result = fibonacci(20);
 </code>
 </div>
 </p>
 
-<p>A shorthand => (arrow) syntax is handy for functions that contain a single statement. This syntax is especially useful when passing anonymous functions as arguments:</p>
-
+<p>Example #2: A function which receives 2 numbers as its arguments, adds them and displays the result:</p>
 <p>
 <div class="scroll">
 <code>
-flybyObjects.where((name) => name.contains('turn')).forEach(print);
+void add(int num1, int num2) {
+  int result = num1 + num2;
+  print(result);
+}
+</code>
+</div>
+</p>
+
+<p>Example #3: A function which receives 2 numbers as its arguments, adds them and returns the result:</p>
+<p>
+<div class="scroll">
+<code>
+int add(int num1, int num2) {
+  int result = num1 + num2;
+  return result;
+}
+</code>
+</div>
+</p>
+
+<p>Example #4: A function which calls another function and receives the result:</p>
+<p>
+<div class="scroll">
+<code>
+int add(int num1, int num2) {
+  int result = num1 + num2;
+  return result;
+}
+	
+void calculator()
+{
+    int result = add(100, 300);
+    print(result);
+}	
 </code>
 </div>
 </p>
