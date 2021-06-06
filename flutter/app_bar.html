@@ -400,54 +400,10 @@ actions:
 
 <br/><br/>
 <p>The complete main.dart file</p>
-<div class="scroll">
-<code>
-import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: MyHomePage(title: 'My First Flutter app'),
-    );
-  }
-}
+<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/20bc23578787e73d0b23edbd6542c7c73e91bcaf/flutter/appbar.dart?footer=0"></script>
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _MyHomePageState createState() =&gt; _MyHomePageState();
-}
-
-class _MyHomePageState extends State&lt;MyHomePage&gt; {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('My flutter app'),
-          <mark>actions: [</mark>
-            <mark>Text('Button 1'),</mark>   // you can try replacing Text widget with some other widgets like ElevatedButton (more about this later)
-            <mark>Text('Button 2'),</mark>
-            <mark>Text('Button 3'),</mark>
-          <mark>]</mark>,
-        ),
-        body: Text('Demonstration of AppBar action buttons')
-        );
-  }
-}
-
-</code>
-</div>
 <p><mark>Note: You may want to align those actions buttons in a better way. More about that in later chapters.</mark></p>
 <p></p>
 

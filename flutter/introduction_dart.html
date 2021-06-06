@@ -83,7 +83,6 @@ img {
   height: auto;
 }
 
-
 #main {
   transition: margin-left .5s;
   margin-left: 250px;
@@ -145,15 +144,7 @@ function closeNav() {
 
 <ul style="list-style-type:none;">
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_flutter.html">&#9830; &nbsp;Introduction to Flutter</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="why_flutter.html"> &#9830; &nbsp;Why flutter</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_dart.html">&#9830; &nbsp;Introduction to Dart language</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dart_data_types.html">&#9830; &nbsp;Data types in Dart</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="conditional_loop_dart.html">&#9830; &nbsp;Conditional and loop constructs in Dart</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="list_dart.html">&#9830; &nbsp;List in Dart</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="sync_async_dart.html">&#9830; &nbsp;Synchronous and asynchronous functions</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="future_functions_dart.html">&#9830; &nbsp;Future functions - async functions</a></li>
-
-  
 </ul>
 
 <strong><font color=red> <center>Start Building Mobile App </center></font></strong>
@@ -203,7 +194,6 @@ function closeNav() {
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="auto_complete.html">&#9830; &nbsp;AutoComplete</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="flutter_logo.html">&#9830; &nbsp;FlutterLogo</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="bottomnavigationbar.html">&#9830; &nbsp;BottomNavigationBar</a></li>
-
 </ul>
 
 <strong><font color=green> <center>Exercise </center></font></strong>
@@ -270,89 +260,132 @@ function closeNav() {
 	
   </div>
 
-
-
 <div id="main">
   <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button> 
 
 <br/>
-    <p><h1>Row Widget</h1></p>
+<h1>What is Dart?</h1>
+<p>Dart is a programming language. Flutter uses Dart for cross platform app development. </p>
+<br/>
+<p><h2>Quick overview of Dart language:</h2></p>
 
-    <p>
-        A <strong>Row </strong> is used to lay other widgets horizontally. A <i>Row</i> widget is a container which can hold multiple children and they are displayed horizontally one after the other<br /><br />
-    </p>
-    <p><strong>Important parameters:</strong> mainAxisAlignment (optional), children </p>
-    <p><strong>Usage example: Row(mainAxisAlignment:</strong> MainAxisAlignment.center, children[ <list of children>])</p>
-
-    <p><strong>Example,</strong> to display the row of 3 colored Sized box like the following:</p>
-	<p>
-<img src="../images/a_row_of_3_sized_box.png"><img></p>
-
-<p>The following code can be used:</p>
-
+<h3>Hello World</h3>
+Every app has a main() function. To display text on the console, you can use the top-level print() function:
+<p>
 <div class="scroll">
 <code>
-Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  
-	//1st Child
-	SizedBox(width: 100.0, height: 100.0,
-	  child:
-		DecoratedBox(decoration: BoxDecoration(color: Colors.red,)),
-	),
-
-	//2nd Child
-	SizedBox(width: 10,),
-
-	//3rd Child
-	SizedBox(width: 100.0, height: 100.0,
-	  child:
-	  DecoratedBox(decoration: BoxDecoration(color: Colors.green,))
-	),
-
-	//4th Child
-	SizedBox(width: 10,),
-
-	//5th Child
-	SizedBox(width: 100.0, height: 100.0,
-		child:
-		DecoratedBox(decoration: BoxDecoration(color: Colors.blue,))
-	),
-  ],
-)
+void main() {
+  print('Hello, World!');
+}
 </code>
 </div>
-    
-<br/>
-    <p>If you do not use the 2nd and the 4th child in the above code, the output will be like this:</p>
-	<p><img src="../images/a_row_of_3_sized_box_without_gaps.png"><img></p>
-
-
-
-<br>
-    <p><strong>Complete main.dart which displays 3 colored box laid horizontally:</strong></p>
-
-
-<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/78582929c485780e0066168c7ffb7fe8873b4cdf/flutter/row.dart?footer=0"></script>
-
-
-<p>Output</p>
-
-<p><img src="../images/a_row_of_3_sized_box.png"><img></p>
-<br>
-<hr width="100%"><br>
-
-<p>Questions:</p>
-<p>
-<ol>
-<li>What happens if the number of children in the Row widget are more than the screen space?</li>
-<li>Can a Row widget contain another Row widget?</li>
-<li>Can a Row widget contain zero number of child widgets?</li>
-<li>What is the default height of a Row widget?</li>
-<li>Can a Row widget contain a Column widget as one of its child?</li>
-</ol>
 </p>
 
-<body>
+<h3>Variables</h3>
+Most variables don't need explicit types:
+<p>
+<div class="scroll">
+<code>
+var name = 'Voyager I';
+var year = 1977;
+var antennaDiameter = 3.7;
+var flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+var image = {
+  'tags': ['saturn'],
+  'url': '//path/to/saturn.jpg'
+};
+</code>
+</div>
+</p>
+
+<h3>Control flow statements</h3>
+Dart supports the usual control flow statements:
+<p>
+<div class="scroll">
+<code>
+if (year >= 2001) {
+  print('21st century');
+} else if (year >= 1901) {
+  print('20th century');
+}
+
+for (var object in flybyObjects) {
+  print(object);
+}
+
+for (int month = 1; month <= 12; month++) {
+  print(month);
+}
+
+while (year < 2016) {
+  year += 1;
+}
+</code>
+</div>
+</p>
+
+<h3>Functions</h3>
+We recommend specifying the types of each function’s arguments and return value:
+<p>
+<div class="scroll">
+<code>
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+var result = fibonacci(20);
+</code>
+</div>
+</p>
+
+<p>A shorthand => (arrow) syntax is handy for functions that contain a single statement. This syntax is especially useful when passing anonymous functions as arguments:</p>
+
+<p>
+<div class="scroll">
+<code>
+flybyObjects.where((name) => name.contains('turn')).forEach(print);
+</code>
+</div>
+</p>
+
+<h3>Comments</h3>
+Dart comments usually start with //.
+<p>
+<div class="scroll">
+<code>
+
+
+// This is a normal, one-line comment.
+
+/// This is a documentation comment, used to document libraries,
+/// classes, and their members. Tools like IDEs and dartdoc treat
+/// doc comments specially.
+
+/* Comments like these are also supported. */
+</code>
+</div>
+</p>
+
+<h3>Imports</h3>
+To access APIs defined in other libraries, use import.
+<p>
+<div class="scroll">
+<code>
+// Importing core libraries
+import 'dart:math';
+
+// Importing libraries from external packages
+import 'package:test/test.dart';
+
+
+// Importing files
+import 'path/to/my_other_file.dart';
+</code>
+</div>
+</p>
+<br/>
+</div>
+</body>
 </html>
+

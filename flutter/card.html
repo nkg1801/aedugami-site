@@ -270,89 +270,23 @@ function closeNav() {
 	
   </div>
 
-
-
 <div id="main">
   <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button> 
-
-<br/>
-    <p><h1>Row Widget</h1></p>
-
-    <p>
-        A <strong>Row </strong> is used to lay other widgets horizontally. A <i>Row</i> widget is a container which can hold multiple children and they are displayed horizontally one after the other<br /><br />
-    </p>
-    <p><strong>Important parameters:</strong> mainAxisAlignment (optional), children </p>
-    <p><strong>Usage example: Row(mainAxisAlignment:</strong> MainAxisAlignment.center, children[ <list of children>])</p>
-
-    <p><strong>Example,</strong> to display the row of 3 colored Sized box like the following:</p>
-	<p>
-<img src="../images/a_row_of_3_sized_box.png"><img></p>
-
-<p>The following code can be used:</p>
-
-<div class="scroll">
-<code>
-Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
   
-	//1st Child
-	SizedBox(width: 100.0, height: 100.0,
-	  child:
-		DecoratedBox(decoration: BoxDecoration(color: Colors.red,)),
-	),
 
-	//2nd Child
-	SizedBox(width: 10,),
-
-	//3rd Child
-	SizedBox(width: 100.0, height: 100.0,
-	  child:
-	  DecoratedBox(decoration: BoxDecoration(color: Colors.green,))
-	),
-
-	//4th Child
-	SizedBox(width: 10,),
-
-	//5th Child
-	SizedBox(width: 100.0, height: 100.0,
-		child:
-		DecoratedBox(decoration: BoxDecoration(color: Colors.blue,))
-	),
-  ],
-)
-</code>
-</div>
-    
 <br/>
-    <p>If you do not use the 2nd and the 4th child in the above code, the output will be like this:</p>
-	<p><img src="../images/a_row_of_3_sized_box_without_gaps.png"><img></p>
-
-
+    <p><h1>Card Widget</h1></p>
 
 <br>
-    <p><strong>Complete main.dart which displays 3 colored box laid horizontally:</strong></p>
+    <p><strong>Complete main.dart file</strong></p>
 
-
-<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/78582929c485780e0066168c7ffb7fe8873b4cdf/flutter/row.dart?footer=0"></script>
-
+<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/6833a7972795945bd0f4053d281ca5b7a6efd09b/flutter/card.dart?footer=0"></script>
 
 <p>Output</p>
 
-<p><img src="../images/a_row_of_3_sized_box.png"><img></p>
+<p><img src="../images/card.png"><img></p>
 <br>
 <hr width="100%"><br>
-
-<p>Questions:</p>
-<p>
-<ol>
-<li>What happens if the number of children in the Row widget are more than the screen space?</li>
-<li>Can a Row widget contain another Row widget?</li>
-<li>Can a Row widget contain zero number of child widgets?</li>
-<li>What is the default height of a Row widget?</li>
-<li>Can a Row widget contain a Column widget as one of its child?</li>
-</ol>
-</p>
-
-<body>
+</div>
+</body>
 </html>

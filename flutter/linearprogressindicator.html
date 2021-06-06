@@ -185,20 +185,20 @@ function closeNav() {
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="focus_node.html">&#9830; &nbsp;FocusNode</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="buttons.html">&#9830; &nbsp;TextButton, ElevatedButton and OutlineButton</a></li>
     <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="gas_detector.html">&#9830; &nbsp;GestureDetector</a></li>
+    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="inkwell.html">&#9830; &nbsp;InkWell</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dropdown_button.html">&#9830; &nbsp;DropDownButton</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="container.html">&#9830; &nbsp;Container</a></li>
     <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="padding.html">&#9830; &nbsp;Padding</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="image_and_icons.html">&#9830; &nbsp;Image and Icon</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="listview.html">&#9830; &nbsp;ListView</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="card.html">&#9830; &nbsp;Card</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="ink_well.html">&#9830; &nbsp;InkWell</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="form.html">&#9830; &nbsp;Form, FormTextField</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="circularprogressindicator.html">&#9830; &nbsp;CircularProgressIndicator</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="linear_progress_indicator.html">&#9830; &nbsp;LinearProgressIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="linearprogressindicator.html">&#9830; &nbsp;LinearProgressIndicator</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="checkbox.html">&#9830; &nbsp;CheckBox</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="radiolist_tile.html">&#9830; &nbsp;RadioListTile (RadioButton)</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="stack.html">&#9830; &nbsp;Stack</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="refresh_indicator.html">&#9830; &nbsp;RefreshIndicator</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="refreshindicator.html">&#9830; &nbsp;RefreshIndicator</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="tab.html">&#9830; &nbsp;Tab</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="auto_complete.html">&#9830; &nbsp;AutoComplete</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="flutter_logo.html">&#9830; &nbsp;FlutterLogo</a></li>
@@ -269,38 +269,80 @@ function closeNav() {
 <br/><br/><br/>
 	
   </div>
-<br/>
-
 
 <div id="main">
   <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button> 
-<h3>InkWell widget</h3>
+<h3>LinearProgressIndicator</h3>
 
-<strong>InkWell</strong> widget is used to provide touch or click functionality to a widget. Some of the widgets, like Text widget in flutter, do not have any touch or click functionality by default. To add touch or click functionality, such widgets can be wrapped inside InkWell widget. InkWell widget is similar to GestureDetector widget. The only difference is that InkWell widget provides a splash effect on the widget on touch or click<br/><br/>
+As the name suggests, <strong>LinearProgressIndicator</strong> widget is used in flutter to create Linear Progress Indicators (Progress bars). <br/><br/>
 
-<p>Usage:</p>
+There are 2 types of progress bars: <strong>determinant</strong> and <strong>indeterminant</strong>. Determinant progress bars are those which shows the absolute progress of the task and provides an idea when the task is going to complete, whereas indetermint progress bars does not show the absolute progress of the task as it is not known when the task is going to complete. <br/><br/>
+
+Both Determinant and Indeterminant Linear progress bar can be created in flutter with LinearProgressIndicator widget. If you provide the <strong>value</strong> parameter, the progress bar becomes a determinant otherwise its indeterminant. The <strong>value</strong> parameter can take value ranging from 0.0 (0% completion) to 1.0 (100% completion)
+<br/><br/>
+<p>Indeterminant LinearProgressIndicator:</p>
 <div class="scroll">
 <code>
-Inwell(child:
-    Text('This is clickable text'),
-    onPressed: (){
-        // todo: whatever you want to do on the click of this Text Widget
-    }
-)
+LinearProgressIndicator(),
 </code>
 </div>    
 
 <br/>
 
+<p>Determinant LinearProgressIndicator:</p>
+
+<div class="scroll">
+<code>
+LinearProgressIndicator(
+    value = 0.4), // for 40% completion
+</code>
+</div>   
+
+<p>Notable parameters</p>
+<ul>
+<li>backgroundColor</li>
+<li>valueColor</li>
+<li>value</li>
+<li>minHeight</li>
+</ul>
+
+<p><font color="red"><h4>backgroundColor</h4></font></p>
+This parameter is used to specify the background color of the progress indicator. The default background color is the secondary color of the selected theme<br/>
+
+<br/>
+
+<p><font color="red"><h4>valueColor</h4></font></p>
+This parameter is used to specify the value color of the progress indicator in terms of AlwaysStoppedAnimation. In case of determinant progress bar, this color will fill the completed part of the progress indicator.
+<br/><br/>
+<p><font color="red"><h4>value</h4></font></p>
+This parameter is used only for the Determinant type of progress indicators. Use this value to show the percentage of completion. It can take value from 0.0 (0% completion) to 1.0 (100% completion).
+
+<p>Code snippet with all the above parameters:</p>
+
+<div class="scroll">
+<code>
+LinearProgressIndicator(
+   backgroundColor: Colors.redAccent,
+   valueColor: AlwaysStoppedAnimation(Colors.grey),
+   value = 0.4 // showing 40% completion (remove this parameter if its inditerminant progress indicator)
+)
+</code>
+</div>
+
+<br>
+<p>If you want to change the default size of CircularProgressIndicator, you can wrap the same inside a SizedBox widget specifying the width and height parameter for the required size, something like this:</p>
+
+
+
 <br/><br/>
 
-<p>Complete main.dart file showing showing the usage of InkWell with a Text widget</p>
+<p>Complete main.dart file showing 5 different linear progress bars:</p>
 
-<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/af531350d780e04dda81db0d1f5f6ed5534911b0/flutter/inkwell.dart?footer=0"></script>
+<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/e4f5b2526b7f3ee5bdedffecf9b9b2f26f33b4fd/flutter/linearprogressindicator.dart?footer=0"></script>
 
 Output:
 
- <p><img src="../images/inkwell_4.png"><img></p>
+ <p><img src="../images/linearprogress.gif"><img></p>
  
  </div>
  

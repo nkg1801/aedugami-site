@@ -19,7 +19,6 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-    
 }
 
 .sidebar a {
@@ -82,7 +81,13 @@ img {
   width: auto;
   height: auto;
 }
-
+img.auto {
+  display: block;
+  max-width:500px;
+  max-height:600px;
+  width: auto;
+  height: auto;
+}
 
 #main {
   transition: margin-left .5s;
@@ -145,28 +150,18 @@ function closeNav() {
 
 <ul style="list-style-type:none;">
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_flutter.html">&#9830; &nbsp;Introduction to Flutter</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="why_flutter.html"> &#9830; &nbsp;Why flutter</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="introduction_dart.html">&#9830; &nbsp;Introduction to Dart language</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="dart_data_types.html">&#9830; &nbsp;Data types in Dart</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="conditional_loop_dart.html">&#9830; &nbsp;Conditional and loop constructs in Dart</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="list_dart.html">&#9830; &nbsp;List in Dart</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="sync_async_dart.html">&#9830; &nbsp;Synchronous and asynchronous functions</a></li>
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="future_functions_dart.html">&#9830; &nbsp;Future functions - async functions</a></li>
-
-  
 </ul>
 
 <strong><font color=red> <center>Start Building Mobile App </center></font></strong>
 
 <ul style="list-style-type:none;">
-  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="material_design.html">&#9830; &nbsp;Material design</a></li>
-    <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="app_basic_structure.html">&#9830; &nbsp;Basic structure of a mobile app</a></li>
+  <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="app_basic_structure.html">&#9830; &nbsp;Basic structure of a mobile app</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="first_flutter_app.html">&#9830; &nbsp;Building first flutter app</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="project_and_file_structure.html">&#9830; &nbsp;Project and file structure of flutter app</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="running_app_in_emulator.html">&#9830; &nbsp;Run your app in android emulator</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="deploying_app_in_real_device.html">&#9830; &nbsp;Deploying apps in real device</a></li>
   <li style="padding-bottom:0.5em"><a style="text-decoration:none" href="using_terminal_window.html">&#9830; &nbsp;Using Android Studio Terminal Window</a></li>
-
 </ul>
 
 <strong><font color=red> <center>Using different Widgets </center></font></strong>
@@ -273,86 +268,31 @@ function closeNav() {
 
 
 <div id="main">
-  <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button> 
+  <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button>  
+  <h1> Building your first Flutter app </h1>
+<br>
+<p><h3>Step 1</h3></p>
+Start Android Studio and then click "Create New Flutter Project" on the welcome screen. Or if the Android Studio is already running without the Welcome screen, then click "File -> New -> New Flutter Project".
+<p><img class="auto" src="../images/create_new_flutter_project_1.png"/></p>
+<p><h3>Step 2</h3></p>
+Select "Flutter Application" if not already selected and then click NEXT
+<p><img class="auto" src="../images/create_new_flutter_project_2.png"/></p>
+<p><h3>Step 3</h3></p>
+Give a name for your Flutter Project.
+<p><img class="auto" src="../images/create_new_flutter_project_3.png"/></p>
+<p><h3>Step 4</h3></p>
+You can change the package name here, but for the time being leave it as it is and click "FINISH"
+<p><img class="auto" src="../images/create_new_flutter_project_4.png"/></p>
+<p><h3>Step 5</h3></p>
+<p><img class="auto" src="../images/create_new_flutter_project_5.png"/></p>
 
-<br/>
-    <p><h1>Row Widget</h1></p>
-
-    <p>
-        A <strong>Row </strong> is used to lay other widgets horizontally. A <i>Row</i> widget is a container which can hold multiple children and they are displayed horizontally one after the other<br /><br />
-    </p>
-    <p><strong>Important parameters:</strong> mainAxisAlignment (optional), children </p>
-    <p><strong>Usage example: Row(mainAxisAlignment:</strong> MainAxisAlignment.center, children[ <list of children>])</p>
-
-    <p><strong>Example,</strong> to display the row of 3 colored Sized box like the following:</p>
-	<p>
-<img src="../images/a_row_of_3_sized_box.png"><img></p>
-
-<p>The following code can be used:</p>
-
-<div class="scroll">
-<code>
-Row(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-  
-	//1st Child
-	SizedBox(width: 100.0, height: 100.0,
-	  child:
-		DecoratedBox(decoration: BoxDecoration(color: Colors.red,)),
-	),
-
-	//2nd Child
-	SizedBox(width: 10,),
-
-	//3rd Child
-	SizedBox(width: 100.0, height: 100.0,
-	  child:
-	  DecoratedBox(decoration: BoxDecoration(color: Colors.green,))
-	),
-
-	//4th Child
-	SizedBox(width: 10,),
-
-	//5th Child
-	SizedBox(width: 100.0, height: 100.0,
-		child:
-		DecoratedBox(decoration: BoxDecoration(color: Colors.blue,))
-	),
-  ],
-)
-</code>
+<p><h3>Step 6</h3></p>
+If your Android Virtual Device (AVD) is not running, run it by clicking Tools -> AVD Manager and then selecting the green play button on the emulator image. Wait till the AVD is fully loaded and ready.
+<p><h3>Step 7</h3></p>
+Click the Play button on the Android Studio toolbar and run the app in the emulator. When you are running for the app for the first time, this could take a couple of minutes. If there are no problems in the app, the app should start running on the emulator.
 </div>
-    
-<br/>
-    <p>If you do not use the 2nd and the 4th child in the above code, the output will be like this:</p>
-	<p><img src="../images/a_row_of_3_sized_box_without_gaps.png"><img></p>
+</body>
 
-
-
-<br>
-    <p><strong>Complete main.dart which displays 3 colored box laid horizontally:</strong></p>
-
-
-<script src="http://gist-it.appspot.com/https://github.com/nkg1801/samples/blob/78582929c485780e0066168c7ffb7fe8873b4cdf/flutter/row.dart?footer=0"></script>
-
-
-<p>Output</p>
-
-<p><img src="../images/a_row_of_3_sized_box.png"><img></p>
-<br>
-<hr width="100%"><br>
-
-<p>Questions:</p>
-<p>
-<ol>
-<li>What happens if the number of children in the Row widget are more than the screen space?</li>
-<li>Can a Row widget contain another Row widget?</li>
-<li>Can a Row widget contain zero number of child widgets?</li>
-<li>What is the default height of a Row widget?</li>
-<li>Can a Row widget contain a Column widget as one of its child?</li>
-</ol>
-</p>
-
-<body>
+</head>
 </html>
+
