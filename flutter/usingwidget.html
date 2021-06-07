@@ -257,19 +257,42 @@ function closeNav() {
 </ul>
 
 <br/>
-<strong><font color=green><a style="text-decoration:none" href="questions.html" target ="contents"><center>Question and Answers</center></a></font></strong>
+<strong><font color=green><a style="text-decoration:none" href="questions.html"><center>Question and Answers</center></a></font></strong>
 <br/><br/><br/>
 	
   </div>
 
-
-
 <div id="main">
   <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button>  
   
-<br><br><br><br>
-<center><img src="../images/flutter.png">
-<center><img src="../images/flutter_home.png" width="500px">
+  <br/>
+    <p><h1>Using Widgets</h1></p>
+    <p>Normally any mobile application is made up of several pages or screens. In flutter these pages or screens are called routes.</p>
+    
+    <p>Each of the routes could be made up of several different widgets. For example, if you look at the following login screen, it is made up of several different widgets:</p>
+    <p><img src="..\images\fluter_login_form.png"/></p>
+    <p>The above login form is made up of the following widgets:</p>
+    <ul>
+    <li>AppBar widget</li>
+    <li>Text widget</li>
+    <li>TextField</li>
+    <li>ElevatedButton widget</li>
+    </ul>
+
+<h3>Using a widget</h3>
+    <p>Each widget in flutter is represented by something called a Class. The name of the Class is same as that of the Widget. To use a widget, we need to create an instance of that widget class. The Widget Class provides a special function called <strong>Constructor</strong> to create an instance of the class or the widget. We need to pass certain value called <strong>arguments</strong> to the constructor of the class. For example, to create a Text widget (to display some text), you can use the following code snippet:
+        
+        <div class="scroll">
+        <code>
+        Text('Hello World! I am learning flutter')
+        </code>
+        </div>
+        
+        <p>In the above code snippet, Text class is used to create a Text widget. The argument being passed here is the text that we want to display. So, the text <i>Hello World! I am learning flutter</i> is argument being passed here.
+        <p><img src="..\images\text_usage.png"/></p>
+        <br/><br/>
+        <p><img src="..\images\sizedbox_usage.png"/></p>
+<br/>
 </div>
 </body>
 </html>

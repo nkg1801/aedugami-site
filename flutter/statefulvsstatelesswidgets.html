@@ -262,14 +262,55 @@ function closeNav() {
 	
   </div>
 
-
-
 <div id="main">
   <button class="openbtn" onclick="toggleSidebar()" id="toggle_button">Hide Table of Contents</button>  
   
-<br><br><br><br>
-<center><img src="../images/flutter.png">
-<center><img src="../images/flutter_home.png" width="500px">
+  <br/>
+    <p><h1>Widget</h1></p>
+    <p>In Flutter all the UI (User Interface) elements are called Widgets. For example, a Text, a Button, an Image etc etc.</p>
+    
+    <p>Flutter categorizes widgets into two categories:</p>
+    <ol>
+        <li>Stateful Widgets</li>
+        <li>Stateless Widgets</li>
+    </ol>
+    <br/>
+    
+    <p><img src="../images/stateful_stateless.png"/></p>
+    <br/>
+    <p><h3><font color="brown">Stateful Widgets</font></h3></p>
+    <p>A Stateful Widget is a widget which can change its state like color, size, appearance etc. The state of a Stateful widget can change multiple times during the runtime of an app. Some examples can be CheckBox, RadioButton, Form, TextField etc. Some of the examples of state change of a widget are:</p>
+    <ul>
+        <li>A Button changing its color.</li>
+        <li>A Text field changing its text</li>
+        <li>A Button changing its position or size</li>
+        <li>A Check box or a radio button changing its appearance</li>
+    </ul>
+ 
+    <p>Implementing a stateful widget requires at least two classes:</p>
+    <p>
+    <ol>
+    <li>a StatefulWidget class </li>
+    <li>a State class.</li>
+    </ol>
+    </p>
+    
+   <p><img src="../images/stateful_widget.png"/></p>
+    
+       <br/>
+    <p><h3><font color="brown">Stateless Widgets</font></h3></p>
+    <p>A Stateless Widget is a widget which cannot change any of its state like color or size. Its like a constant. Icon, IconButton, and Text are examples of stateless widgets.</p>
+    
+        <p>Implementing a stateless widget requires only one class:</p>
+    <p>
+    <ol>
+    <li>a StatelessWidget class </li>
+    </ol>
+    </p>
+    
+    <p><img src="../images/stateless_widget.png"/></p>
+    
+<br/>
 </div>
 </body>
 </html>
